@@ -4,10 +4,8 @@ LABEL Maintainer="ndbsrjsdn@naver.com"
 # 메타데이터로 docker inspect 명령으로 찾아볼 수 있음
 
 COPY . /app
-
 WORKDIR /app
-
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 4000
 # 이 포트 번호를 사용하니 포트 맵핑을 할때 참고하라는 정보
