@@ -1,0 +1,21 @@
+CLIENTNUM,Customer_Age,Gender,Dependent_count,Education_Level,Marital_Status,Income_Category,Card_Category
+712813458,49,M,2,Unknown,Married,$120K +,Blue
+714374133,56,M,2,Graduate,Married,$120K +,Blue
+710082708,44,M,4,Post-Graduate,Single,$120K +,Blue
+708155733,53,M,2,High School,Single,$120K +,Blue
+715971108,51,M,4,Graduate,Single,$120K +,Blue
+715156383,44,M,1,Unknown,Unknown,$120K +,Blue
+715398033,53,M,2,High School,Single,$120K +,Blue
+778992108,57,M,2,Unknown,Married,$120K +,Blue
+802013583,56,M,3,College,Married,$120K +,Blue
+779155158,53,M,3,Graduate,Married,$120K +,Blue
+779509983,53,M,2,Post-Graduate,Single,$120K +,Blue
+708476808,54,M,4,Unknown,Divorced,$120K +,Blue
+718414008,50,M,2,Graduate,Single,$120K +,Blue
+771075258,55,M,2,College,Single,$120K +,Silver
+783554958,58,M,4,Graduate,Single,$120K +,Blue
+789968058,51,M,1,Unknown,Single,$120K +,Blue
+818839983,55,M,2,Graduate,Married,$120K +,Blue
+712454058,49,M,1,Doctorate,Married,$120K +,Blue
+780466533,54,M,3,Doctorate,Married,$120K +,Blue
+715872333,41,M,0,High School,Unknown,$120K +,Blue

@@ -1,0 +1,30 @@
+# v2 and v3 are now combined!
+# docker-compose v1.27+ required
+# % docker-compose version
+# Docker Compose version v2.15.1
+services:
+  vote:
+    build: ./vote
+    # use python rather than gunicorn for local dev
+    command: python app.py
+    ports:
+      - "5001:80"
+
+  result:
+    build: ./result
+    # use nodemon rather than node for local dev
+    entrypoint: nodemon server.js
+    ports:
+      - "5002:80"
+
+  worker:
+    build: ./worker
+
+  redis:
+    image: redis:alpine
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"

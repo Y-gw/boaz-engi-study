@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  vote:
+    build: ./vote
+    command: python app.py
+    ports:
+      - "5001:80"
+    networks:
+      - front-tier
+      - back-tier
+
+  result:
+    build: ./result
+    entrypoint: nodemon server.js
+    ports:
+      - "5002:80"
+    networks:
+      - front-tier
+      - back-tier
+
+  worker:
+    build: ./worker
+    networks:
+      - back-tier
+
+  redis:
+    image: redis:alpine
+    networks:
+      - back-tier
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - back-tier
+
+volumes:
+  db-data:
+
+networks:
+  front-tier:
+  back-tier:
