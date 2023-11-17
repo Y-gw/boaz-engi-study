@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+      - "9999:9999"
+    restart: always
+    volumes:
+      - .:/home/jovyan
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_DRIVER: org.postgresql.Driver
+      DATABASE_USER: boaz
+      DATABASE_PASSWORD: 12341234
+    networks:
+      - spark-network
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: boaz
+      POSTGRES_PASSWORD: boaz
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "boaz"]
+      interval: 5s
+      retries: 5
+    restart: always
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
+    
+  
