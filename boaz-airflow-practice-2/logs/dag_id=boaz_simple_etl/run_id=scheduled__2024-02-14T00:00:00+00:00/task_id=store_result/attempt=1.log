@@ -1,0 +1,28 @@
+[2024-02-28T10:31:23.083+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.store_result scheduled__2024-02-14T00:00:00+00:00 [queued]>
+[2024-02-28T10:31:23.087+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.store_result scheduled__2024-02-14T00:00:00+00:00 [queued]>
+[2024-02-28T10:31:23.087+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-28T10:31:23.087+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-02-28T10:31:23.087+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-28T10:31:23.093+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): store_result> on 2024-02-14 00:00:00+00:00
+[2024-02-28T10:31:23.095+0000] {standard_task_runner.py:55} INFO - Started process 91 to run task
+[2024-02-28T10:31:23.097+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'boaz_simple_etl', 'store_result', 'scheduled__2024-02-14T00:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/boaz_simple_etl.py', '--cfg-path', '/tmp/tmps8zvoy82']
+[2024-02-28T10:31:23.097+0000] {standard_task_runner.py:83} INFO - Job 35: Subtask store_result
+[2024-02-28T10:31:23.129+0000] {task_command.py:388} INFO - Running <TaskInstance: boaz_simple_etl.store_result scheduled__2024-02-14T00:00:00+00:00 [running]> on host c2cb28f5e5b9
+[2024-02-28T10:31:23.164+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=boaz_simple_etl
+AIRFLOW_CTX_TASK_ID=store_result
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-14T00:00:00+00:00
+[2024-02-28T10:31:23.165+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-02-28T10:31:23.166+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'ETL Done'"]
+[2024-02-28T10:31:23.171+0000] {subprocess.py:86} INFO - Output:
+[2024-02-28T10:31:23.172+0000] {subprocess.py:93} INFO - ETL Done
+[2024-02-28T10:31:23.172+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-02-28T10:31:23.184+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=boaz_simple_etl, task_id=store_result, execution_date=20240214T000000, start_date=20240228T103123, end_date=20240228T103123
+[2024-02-28T10:31:23.623+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-02-28T10:31:23.643+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

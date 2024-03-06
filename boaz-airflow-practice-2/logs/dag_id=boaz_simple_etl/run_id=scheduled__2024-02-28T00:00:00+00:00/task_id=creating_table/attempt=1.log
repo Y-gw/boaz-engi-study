@@ -1,0 +1,34 @@
+[2024-02-29T08:46:27.604+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.creating_table scheduled__2024-02-28T00:00:00+00:00 [queued]>
+[2024-02-29T08:46:27.608+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.creating_table scheduled__2024-02-28T00:00:00+00:00 [queued]>
+[2024-02-29T08:46:27.608+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-29T08:46:27.609+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-02-29T08:46:27.609+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-02-29T08:46:27.615+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): creating_table> on 2024-02-28 00:00:00+00:00
+[2024-02-29T08:46:27.618+0000] {standard_task_runner.py:55} INFO - Started process 63 to run task
+[2024-02-29T08:46:27.621+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'boaz_simple_etl', 'creating_table', 'scheduled__2024-02-28T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/boaz_simple_etl.py', '--cfg-path', '/tmp/tmp1ea8gbcu']
+[2024-02-29T08:46:27.622+0000] {standard_task_runner.py:83} INFO - Job 38: Subtask creating_table
+[2024-02-29T08:46:27.661+0000] {task_command.py:388} INFO - Running <TaskInstance: boaz_simple_etl.creating_table scheduled__2024-02-28T00:00:00+00:00 [running]> on host c2cb28f5e5b9
+[2024-02-29T08:46:27.700+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=boaz_simple_etl
+AIRFLOW_CTX_TASK_ID=creating_table
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-28T00:00:00+00:00
+[2024-02-29T08:46:27.702+0000] {sql.py:254} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS job_search_result (
+                title TEXT
+            )
+        
+[2024-02-29T08:46:27.705+0000] {base.py:73} INFO - Using connection ID 'postgres_conn_id' for task execution.
+[2024-02-29T08:46:27.839+0000] {base.py:73} INFO - Using connection ID 'postgres_conn_id' for task execution.
+[2024-02-29T08:46:27.841+0000] {sql.py:375} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS job_search_result (
+                title TEXT
+            )
+        , parameters: None
+[2024-02-29T08:46:27.847+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=boaz_simple_etl, task_id=creating_table, execution_date=20240228T000000, start_date=20240229T084627, end_date=20240229T084627
+[2024-02-29T08:46:28.871+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-02-29T08:46:28.896+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2024-03-05T12:19:27.801+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.etl scheduled__2024-03-04T00:00:00+00:00 [queued]>
+[2024-03-05T12:19:27.806+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: boaz_simple_etl.etl scheduled__2024-03-04T00:00:00+00:00 [queued]>
+[2024-03-05T12:19:27.808+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-05T12:19:27.809+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-03-05T12:19:27.812+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-05T12:19:27.818+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): etl> on 2024-03-04 00:00:00+00:00
+[2024-03-05T12:19:27.821+0000] {standard_task_runner.py:55} INFO - Started process 85 to run task
+[2024-03-05T12:19:27.824+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'boaz_simple_etl', 'etl', 'scheduled__2024-03-04T00:00:00+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/boaz_simple_etl.py', '--cfg-path', '/tmp/tmp32qj3ywm']
+[2024-03-05T12:19:27.825+0000] {standard_task_runner.py:83} INFO - Job 46: Subtask etl
+[2024-03-05T12:19:27.855+0000] {task_command.py:388} INFO - Running <TaskInstance: boaz_simple_etl.etl scheduled__2024-03-04T00:00:00+00:00 [running]> on host c2cb28f5e5b9
+[2024-03-05T12:19:27.884+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=boaz_simple_etl
+AIRFLOW_CTX_TASK_ID=etl
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-04T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-04T00:00:00+00:00
+[2024-03-05T12:19:27.971+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-03-05T12:19:27.977+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=boaz_simple_etl, task_id=etl, execution_date=20240304T000000, start_date=20240305T121927, end_date=20240305T121927
+[2024-03-05T12:19:28.378+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-03-05T12:19:28.397+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
